@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentHome – Create Account</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-wrapper">
+      <!-- ===== Card ===== -->
+      <div class="card">
+
+        <!-- Branding -->
+        <div class="brand" aria-label="RentHome">
+          <span class="brand-icon" aria-hidden="true">🏠</span>
+          <span class="brand-name">RentHome</span>
+        </div>
+
+        <h1 class="card-title">Create Your RentHome Account</h1>
+        <p class="card-subtitle">
+          Find and manage your perfect rental — all in one place.
+        </p>
+
+        <!-- Success banner (hidden until valid submit) -->
+        <div
+          id="success-message"
+          class="success-banner"
+          role="alert"
+          aria-live="polite"
+          hidden
+        >
+          <span class="success-icon" aria-hidden="true">✓</span>
+          Account created successfully! Welcome to RentHome.
+        </div>
+
+        <!-- ===== Registration Form ===== -->
+        <form id="register-form" novalidate aria-label="Account registration">
+
+          <!-- Full Name -->
+          <div class="field-group" id="group-name">
+            <label class="field-label" for="name">Full Name</label>
+            <input
+              class="field-input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="firansibekan"
+              autocomplete="name"
+              aria-describedby="error-name"
+              aria-required="true"
+            />
+            <span class="field-error" id="error-name" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="field-group" id="group-email">
+            <label class="field-label" for="email">Email Address</label>
+            <input
+              class="field-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="firansi@gmail.com.com"
+              autocomplete="email"
+              aria-describedby="error-email"
+              aria-required="true"
+            />
+            <span class="field-error" id="error-email" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="field-group" id="group-phone">
+            <label class="field-label" for="phone">Phone Number</label>
+            <input
+              class="field-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="09XX XXX XXX or +251 9XX XXX XXX"
+              autocomplete="tel"
+              aria-describedby="error-phone hint-phone"
+              aria-required="true"
+            />
+            <span class="field-hint" id="hint-phone">
+              Formats accepted: 0911 123456 · 0711 123456 · +251 911 123456
+            </span>
+            <span class="field-error" id="error-phone" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="field-group" id="group-password">
+            <label class="field-label" for="password">Password</label>
+            <div class="input-wrapper">
+              <input
+                class="field-input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                aria-describedby="error-password strength-bar-label"
+                aria-required="true"
+              />
+              <button
+                class="toggle-visibility"
+                type="button"
+                id="toggle-password"
+                aria-label="Show password"
+                aria-controls="password"
+              >
+                <svg class="eye-icon" id="eye-password" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12S5 5 12 5s11 7 11 7-4 7-11 7S1 12 1 12z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="eye-icon eye-off hidden" id="eye-off-password" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17.94 17.94A10.8 10.8 0 0 1 12 20C5 20 1 12 1 12a18.1 18.1 0 0 1 5.06-5.94"/>
+                  <path d="M9.9 4.24A9.1 9.1 0 0 1 12 4c7 0 11 8 11 8a18.1 18.1 0 0 1-2.16 3.19"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Strength indicator -->
+            <div class="strength-bar-wrapper" aria-hidden="true">
+              <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <span class="strength-label" id="strength-bar-label" aria-live="polite"></span>
+
+            <span class="field-error" id="error-password" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="field-group" id="group-confirm">
+            <label class="field-label" for="confirm-password">Confirm Password</label>
+            <div class="input-wrapper">
+              <input
+                class="field-input"
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Re-enter your password"
+                autocomplete="new-password"
+                aria-describedby="error-confirm"
+                aria-required="true"
+              />
+              <button
+                class="toggle-visibility"
+                type="button"
+                id="toggle-confirm"
+                aria-label="Show confirm password"
+                aria-controls="confirm-password"
+              >
+                <svg class="eye-icon" id="eye-confirm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12S5 5 12 5s11 7 11 7-4 7-11 7S1 12 1 12z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="eye-icon eye-off hidden" id="eye-off-confirm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17.94 17.94A10.8 10.8 0 0 1 12 20C5 20 1 12 1 12a18.1 18.1 0 0 1 5.06-5.94"/>
+                  <path d="M9.9 4.24A9.1 9.1 0 0 1 12 4c7 0 11 8 11 8a18.1 18.1 0 0 1-2.16 3.19"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+            <span class="field-error" id="error-confirm" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Submit -->
+          <button class="btn-submit" type="submit" id="submit-btn">
+            Create Account
+          </button>
+
+          <p class="form-footer">
+            Already have an account?
+            <a href="#" class="form-link">Sign in</a>
+          </p>
+
+        </form>
+      </div><!-- /card -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
