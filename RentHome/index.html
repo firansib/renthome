@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RentHome – Find rental homes that match your location, budget, and lifestyle." />
+  <title>RentHome – Find a Place You'll Love to Call Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container container">
+      <!-- Brand -->
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon">🏠</span>
+        <span class="brand-name">RentHome</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#properties" class="nav-link">Properties</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA + Hamburger -->
+      <div class="nav-actions">
+        <a href="#properties" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="hero-content container">
+        <div class="hero-text">
+          <span class="hero-badge">🏡 Trusted Rental Platform</span>
+          <h1 class="hero-title">Find a Place You'll Love to Call Home</h1>
+          <p class="hero-description">
+            Discover rental homes that match your location, budget, and lifestyle.
+            RentHome makes it easier to explore available properties and connect with property owners.
+          </p>
+          <div class="hero-actions">
+            <a href="#properties" class="btn btn-primary btn-lg">Explore Properties</a>
+            <a href="#contact" class="btn btn-outline btn-lg">List Your Property</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>1,200+</strong>
+              <span>Properties Listed</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>850+</strong>
+              <span>Happy Tenants</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>40+</strong>
+              <span>Cities Covered</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=700&q=80"
+              alt="Modern rental house with beautiful exterior"
+              class="hero-image"
+            />
+            <div class="hero-badge-card">
+              <span class="badge-card-icon">✅</span>
+              <div>
+                <strong>Verified Listings</strong>
+                <span>All properties are verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative wave -->
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== SEARCH ==================== -->
+    <section class="search-section" id="search">
+      <div class="container">
+        <div class="search-card">
+          <h2 class="search-title">Search for Your Ideal Property</h2>
+          <form class="search-form" onsubmit="return false;">
+            <div class="search-field">
+              <label for="location">📍 Location</label>
+              <input type="text" id="location" placeholder="e.g. New York, NY" />
+            </div>
+            <div class="search-field">
+              <label for="type">🏠 Property Type</label>
+              <select id="type">
+                <option value="">All Types</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="studio">Studio</option>
+                <option value="villa">Villa</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="price">💰 Price Range</label>
+              <select id="price">
+                <option value="">Any Price</option>
+                <option value="0-1000">$0 – $1,000/mo</option>
+                <option value="1000-2000">$1,000 – $2,000/mo</option>
+                <option value="2000-3500">$2,000 – $3,500/mo</option>
+                <option value="3500+">$3,500+/mo</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary search-btn">
+              🔍 Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">Everything You Need to Find the Right Home</h2>
+          <p class="section-subtitle">RentHome brings all the tools you need into one clean, simple platform.</p>
+        </div>
+        <div class="features-grid">
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">🔍</div>
+            <h3>Easy Property Search</h3>
+            <p>Filter by location, price, and property type to find exactly what you're looking for in seconds.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">📋</div>
+            <h3>Detailed Property Info</h3>
+            <p>Get comprehensive details including floor plans, amenities, rules, and more for every listing.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">📍</div>
+            <h3>Location-Based Discovery</h3>
+            <p>Explore properties near schools, transport, and key landmarks with interactive map views.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">📷</div>
+            <h3>Property Photos</h3>
+            <p>Browse high-quality images of every room so you know exactly what to expect before you visit.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">📅</div>
+            <h3>Availability Information</h3>
+            <p>See real-time availability and move-in dates so you can plan your transition without surprises.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">📩</div>
+            <h3>Direct Rental Requests</h3>
+            <p>Send rental requests directly to property owners and get quick responses without middlemen.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROPERTIES ==================== -->
+    <section class="properties" id="properties">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Listings</span>
+          <h2 class="section-title">Explore Available Properties</h2>
+          <p class="section-subtitle">Hand-picked properties from verified owners across top cities.</p>
+        </div>
+        <div class="properties-grid">
+
+          <!-- Card 1 -->
+          <article class="property-card reveal">
+            <div class="property-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80"
+                alt="Modern two-story house with garage in Austin"
+                class="property-image"
+              />
+              <span class="property-badge available">Available</span>
+            </div>
+            <div class="property-info">
+              <h3 class="property-title">Modern Family House</h3>
+              <p class="property-location">📍 Austin, TX</p>
+              <div class="property-meta">
+                <span>🛏 3 Bedrooms</span>
+                <span>🛁 2 Bathrooms</span>
+              </div>
+              <div class="property-footer">
+                <div class="property-price">
+                  <strong>$2,400</strong><span>/month</span>
+                </div>
+                <a href="#" class="btn btn-outline btn-sm">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="property-card reveal">
+            <div class="property-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80"
+                alt="Bright studio apartment interior in New York"
+                class="property-image"
+              />
+              <span class="property-badge available">Available</span>
+            </div>
+            <div class="property-info">
+              <h3 class="property-title">Downtown Studio Apartment</h3>
+              <p class="property-location">📍 New York, NY</p>
+              <div class="property-meta">
+                <span>🛏 1 Bedroom</span>
+                <span>🛁 1 Bathroom</span>
+              </div>
+              <div class="property-footer">
+                <div class="property-price">
+                  <strong>$1,800</strong><span>/month</span>
+                </div>
+                <a href="#" class="btn btn-outline btn-sm">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="property-card reveal">
+            <div class="property-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+                alt="Luxury villa with pool in Miami"
+                class="property-image"
+              />
+              <span class="property-badge soon">Coming Soon</span>
+            </div>
+            <div class="property-info">
+              <h3 class="property-title">Luxury Beachside Villa</h3>
+              <p class="property-location">📍 Miami, FL</p>
+              <div class="property-meta">
+                <span>🛏 4 Bedrooms</span>
+                <span>🛁 3 Bathrooms</span>
+              </div>
+              <div class="property-footer">
+                <div class="property-price">
+                  <strong>$4,200</strong><span>/month</span>
+                </div>
+                <a href="#" class="btn btn-outline btn-sm">View Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="properties-cta">
+          <a href="#search" class="btn btn-primary">View All Properties</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple Process</span>
+          <h2 class="section-title">How RentHome Works</h2>
+          <p class="section-subtitle">Get into your next home in three simple steps.</p>
+        </div>
+        <div class="steps-grid">
+
+          <div class="step reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔍</div>
+            <h3>Search</h3>
+            <p>Find properties based on your preferred location, budget, and the type of home you're looking for.</p>
+          </div>
+
+          <div class="step-connector"></div>
+
+          <div class="step reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon">🏠</div>
+            <h3>Explore</h3>
+            <p>View property information, photos, facilities, and availability details before making a decision.</p>
+          </div>
+
+          <div class="step-connector"></div>
+
+          <div class="step reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon">📩</div>
+            <h3>Request</h3>
+            <p>Contact the property owner directly and submit a rental request to secure your new home.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-visual reveal">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+              alt="Happy family in front of their rental home"
+              class="about-image"
+            />
+          </div>
+          <div class="about-content reveal">
+            <span class="section-tag">About RentHome</span>
+            <h2 class="section-title">Built to Simplify the Rental Experience</h2>
+            <p>
+              RentHome is a web-based platform designed to simplify the process of finding and listing rental
+              properties by connecting property owners with people looking for homes.
+            </p>
+            <p>
+              Whether you're a first-time renter or an experienced property owner, RentHome gives you the
+              tools to navigate the rental market with ease and confidence.
+            </p>
+            <ul class="about-list">
+              <li>✅ Verified property listings</li>
+              <li>✅ Direct owner communication</li>
+              <li>✅ Transparent pricing, no hidden fees</li>
+              <li>✅ Available across 40+ cities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2>Ready to Find Your Next Home?</h2>
+          <p>Join thousands of renters who found their perfect home through RentHome.</p>
+          <a href="#search" class="btn btn-white btn-lg">Explore Properties</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">
+            <span class="brand-icon">🏠</span>
+            <span class="brand-name">RentHome</span>
+          </a>
+          <p>Your trusted platform for discovering and listing rental properties across the country.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-link">f</a>
+            <a href="#" aria-label="Twitter" class="social-link">𝕏</a>
+            <a href="#" aria-label="Instagram" class="social-link">in</a>
+            <a href="#" aria-label="LinkedIn" class="social-link">🔗</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Property Types -->
+        <div class="footer-col">
+          <h4>Property Types</h4>
+          <ul>
+            <li><a href="#">Apartments</a></li>
+            <li><a href="#">Houses</a></li>
+            <li><a href="#">Studios</a></li>
+            <li><a href="#">Villas</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>📧 hello@renthome.com</li>
+            <li>📞 +1 (555) 012-3456</li>
+            <li>📍 123 Rental Ave, New York, NY</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 RentHome. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
