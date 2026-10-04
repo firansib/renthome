@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/RentHome/index.html"
-    },
-    {
       "source": "/InteractiveForm",
       "destination": "/InteractiveForm/index.html"
     },
